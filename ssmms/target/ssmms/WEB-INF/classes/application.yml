@@ -1,0 +1,49 @@
+#Tomcat
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+    port: 8080
+    connection-timeout: 5000
+    context-path: /ssmms
+
+#Spring
+  spring:
+  # 环境 dev|pro|test
+    profiles:active: test
+    resources:static-locations: classpath:/thymeleaf/
+  thymeleaf:
+    content-type=textml 
+    prefix=classpath:/thymeleaf/
+    encoding=UTF-8
+    enabled=true
+    cache=false
+ # jackson时间格式化
+  jackson:
+    time-zone: GMT+8
+      date-format:yyyy-MM-dd HH:mm:ss
+    http:
+      multipart:
+        max-file-size: 100MB
+        max-request-size: 100MB
+        enabled: true
+
+#MyBatis
+  mybatis-config:
+    configLocation:classpath:mybatis-config.xml
+    mapperLocations=classpath*:/mapper/**/*.xml 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
